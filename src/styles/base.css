@@ -1,0 +1,373 @@
+/*
+ * @Author: QY
+ * @Date: 2020-01-01 00:00:00
+ * @LastEditors: QY
+ * @LastEditTime: 2020-12-03 16:53:15
+ * @Description: base css 基础样式类
+ * @FilePath: \vue-template\src\styles\base.css
+ */
+
+/**
+ * 布局
+ */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+
+.pa {
+  position: absolute;
+}
+.pr {
+  position: relative;
+}
+
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+}
+.dg {
+  display: grid;
+}
+.df {
+  display: flex;
+}
+.dfc {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex1 {
+  flex: 1;
+}
+.flex2 {
+  flex: 2;
+}
+.flex3 {
+  flex: 3;
+}
+.flex4 {
+  flex: 4;
+}
+
+.vt {
+  vertical-align: top;
+}
+.vm {
+  vertical-align: middle;
+}
+.vb {
+  vertical-align: bottom;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.clear {
+  clear: both;
+}
+
+/**
+ * 文本
+ */
+.underline {
+  text-decoration: underline;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+
+.wrap {
+  white-space: normal;
+}
+.pre {
+  white-space: pre;
+}
+.nowrap {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.tl {
+  text-align: left;
+}
+
+/**
+ * 间距
+ */
+.mg4 {
+  margin: 4px;
+}
+.mg8 {
+  margin: 8px;
+}
+.mg12 {
+  margin: 12px;
+}
+.mg16 {
+  margin: 16px;
+}
+.mg20 {
+  margin: 20px;
+}
+.mg24 {
+  margin: 16px;
+}
+.mg32 {
+  margin: 32px;
+}
+.mg48 {
+  margin: 48px;
+}
+
+.mt4 {
+  margin-top: 4px;
+}
+.mt8 {
+  margin-top: 8px;
+}
+.mt12 {
+  margin-top: 12px;
+}
+.mt16 {
+  margin-top: 16px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt24 {
+  margin-top: 16px;
+}
+.mt32 {
+  margin-top: 32px;
+}
+.mt48 {
+  margin-top: 48px;
+}
+
+.ml4 {
+  margin-left: 4px;
+}
+.ml8 {
+  margin-left: 8px;
+}
+.ml16 {
+  margin-left: 16px;
+}
+.ml20 {
+  margin-left: 20px;
+}
+.ml24 {
+  margin-left: 24px;
+}
+.ml32 {
+  margin-left: 32px;
+}
+.ml48 {
+  margin-left: 48px;
+}
+
+.mb4 {
+  margin-bottom: 4px;
+}
+.mb8 {
+  margin-bottom: 8px;
+}
+.mb12 {
+  margin-bottom: 12px;
+}
+.mb16 {
+  margin-bottom: 16px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb24 {
+  margin-bottom: 24px;
+}
+.mb32 {
+  margin-bottom: 32px;
+}
+.mb48 {
+  margin-bottom: 48px;
+}
+
+.mr4 {
+  margin-right: 4px;
+}
+.mr8 {
+  margin-right: 8px;
+}
+.mr12 {
+  margin-right: 12px;
+}
+.mr16 {
+  margin-right: 16px;
+}
+.mr24 {
+  margin-right: 24px;
+}
+.mr32 {
+  margin-right: 32px;
+}
+.mr48 {
+  margin-right: 48px;
+}
+
+.pd4 {
+  padding: 4px;
+}
+.pd8 {
+  padding: 8px;
+}
+.pd12 {
+  padding: 12px;
+}
+.pd16 {
+  padding: 16px;
+}
+.pd20 {
+  padding: 20px;
+}
+.pd24 {
+  padding: 24px;
+}
+.pd32 {
+  padding: 32px;
+}
+.pd48 {
+  padding: 48px;
+}
+
+.pt4 {
+  padding-top: 4px;
+}
+.pt8 {
+  padding-top: 8px;
+}
+.pt12 {
+  padding-top: 12px;
+}
+.pt16 {
+  padding-top: 16px;
+}
+.pt20 {
+  padding-top: 20px;
+}
+.pt24 {
+  padding-top: 24px;
+}
+.pt32 {
+  padding-top: 32px;
+}
+.pt48 {
+  padding-top: 48px;
+}
+
+.pl4 {
+  padding-left: 4px;
+}
+.pl8 {
+  padding-left: 8px;
+}
+.pl12 {
+  padding-left: 12px;
+}
+.pl16 {
+  padding-left: 16px;
+}
+.pl20 {
+  padding-left: 20px;
+}
+.pl24 {
+  padding-left: 24px;
+}
+.pl32 {
+  padding-left: 32px;
+}
+.pl48 {
+  padding-left: 48px;
+}
+
+.pb4 {
+  padding-bottom: 4px;
+}
+.pb8 {
+  padding-bottom: 8px;
+}
+.pb12 {
+  padding-bottom: 12px;
+}
+.pb16 {
+  padding-bottom: 16px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.pb24 {
+  padding-bottom: 24px;
+}
+.pb32 {
+  padding-bottom: 32px;
+}
+.pb48 {
+  padding-bottom: 48px;
+}
+
+.pr4 {
+  padding-right: 4px;
+}
+.pr8 {
+  padding-right: 8px;
+}
+.pr12 {
+  padding-right: 12px;
+}
+.pr16 {
+  padding-right: 16px;
+}
+.pr20 {
+  padding-right: 20px;
+}
+.pr24 {
+  padding-right: 24px;
+}
+.pr32 {
+  padding-right: 32px;
+}
+.pr48 {
+  padding-right: 48px;
+}
