@@ -1,6 +1,7 @@
 const proxy = process.env.DEV_SERVER_PROXY_URL || 'http://localhost:3001';
 const port = process.env.DEV_SERVER_PORT || 3001;
 
+const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
@@ -18,7 +19,9 @@ module.exports = {
     plugins: [
       new webpack.ProvidePlugin({
         _: 'lodash',
-        Dayjs: 'dayjs'
+        Dayjs: 'dayjs',
+        $utils: [path.resolve(__dirname, 'src/utils'), 'default'], // 非工具库的自定义全局变量统一在前面加上$
+        $http: [path.resolve(__dirname, 'src/libs/http.js'), 'default']
       })
     ]
   },

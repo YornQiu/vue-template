@@ -4,7 +4,7 @@ module.exports = {
     node: true,
   },
   extends: ["plugin:vue/essential", "eslint:recommended", "@vue/prettier"],
-  globals: { // 通过webpack引入的全局变量需在此处添加否则会报错
+  globals: { // 通过webpack引入的全局变量需在此处添加
     _: true,
     Dayjs: true,
   },
