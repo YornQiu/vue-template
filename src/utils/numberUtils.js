@@ -1,3 +1,12 @@
+/*
+ * @Author: QY
+ * @Date: 2020-12-03 16:44:42
+ * @LastEditors: QY
+ * @LastEditTime: 2020-12-31 17:49:01
+ * @Description: 数值格式化工具
+ * @FilePath: \vue-template\src\utils\numberUtils.js
+ */
+
 const numberUtils = {
   // 数值格式化的单位映射
   formatUnit: {
@@ -9,16 +18,13 @@ const numberUtils = {
     1000000: 'M',
     1000000000: 'G'
   },
-
   /**
-   * 增加千分位
-   * @method addKannma
+   * @description 增加千分位
    * @param {Number} number 数值
    * @param {Number} deg 保留小数点位数,默认2位
    * @return {string}
    */
-  addKannma(number, deg) {
-    deg = deg || deg === 0 ? deg : 2;
+  addKannma(number, deg = 2) {
     let num = `${number}`;
     num = num.replace(new RegExp(',', 'g'), '');
     // 正负号处理
@@ -47,12 +53,10 @@ const numberUtils = {
     }
     return number;
   },
-
   /**
-   * 数值格式化
-   * @method format
+   * @description 数值格式化
    * @param {Number} value 数值
-   * @param {option} 格式化参数集合, 默认增加千分位,保留2位小数
+   * @param {object} option 格式化参数集合, 默认增加千分位,保留2位小数
    * @param {string} option.type 格式化类型 num 数值, percent 百分比, flowNum 容量
    * @param {Number} option.deg 保留几位小数
    * @param {boolean} option.kannma 是否增加千分位
@@ -125,9 +129,11 @@ const numberUtils = {
     }
     return value;
   },
-
   /**
-   * 保留小数位,不足补0. 避免默认的double补成9999等问题
+   * @description: 保留小数位，适用toFixed方法固定小数位数
+   * @param {number} num 数值
+   * @param {number} deg 位数
+   * @return {string}
    */
   toFixed(num, deg) {
     let strNum = `${num}`;
@@ -140,20 +146,19 @@ const numberUtils = {
     }
     return num.toFixed(deg);
   },
-
-  // 增加千分位并保留两位小数
-  numFormat(value, isPercent = false) {
-    if (isPercent) {
-      return this.format(value, {
-        type: 'percent',
-        kannma: true,
-        deg: 2
-      });
-    }
+  /**
+   * @description: 金额类格式化，增加千分位并保留两位小数
+   * @param {number} value 数值
+   * @param {boolean} isPercent 是否为百分数
+   * @param {object} option 其他适用于format的参数
+   * @return {string} 格式化后的数值为String
+   */
+  financeFormat(value, isPercent = false, option) {
     return this.format(value, {
-      type: 'num',
+      type: isPercent ? 'percent' : 'num',
       kannma: true,
-      deg: 2
+      deg: 2,
+      ...option
     });
   }
 };

@@ -2,7 +2,7 @@
  * @Author: QY
  * @Date: 2020-12-15 11:44:23
  * @LastEditors: QY
- * @LastEditTime: 2020-12-16 16:44:44
+ * @LastEditTime: 2020-12-31 17:50:38
  * @Description: http
  * @FilePath: \vue-template\src\libs\http.js
  */
@@ -10,8 +10,8 @@ import axios from 'axios';
 import qs from 'qs';
 import { Message } from 'element-ui';
 
-const TOKEN_TYPE = window.localStorage.getItem('token_type') || 'bearer';
-const AUTH_TOKEN = window.localStorage.getItem('access_token');
+const TOKEN_TYPE = $utils.getItem('token_type') || 'bearer';
+const AUTH_TOKEN = $utils.getItem('access_token');
 
 // axios整体配置
 const instance = axios.create({

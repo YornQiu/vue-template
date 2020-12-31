@@ -1,11 +1,12 @@
 @import './styles/base.css';
 @import './styles/fonts/fonts.css';
+@import './styles/icons/icons.css';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  font-size: $font-size;
   color: $text-color;
   background-color: $bg-color;
 }

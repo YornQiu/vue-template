@@ -1,7 +1,7 @@
 {
   "name": "vue-template",
   "version": "0.1.0",
-  "author": "QY",
+  "author": "yogurtq",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -40,6 +40,26 @@
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
+    ],
+    "globals": {
+      "_": true,
+      "Dayjs": true,
+      "$utils": true,
+      "$http": true
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
   "browserslist": [
     "> 1%",
