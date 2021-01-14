@@ -2,7 +2,7 @@
  * @Author: QY
  * @Date: 2020-12-16 15:35:55
  * @LastEditors: QY
- * @LastEditTime: 2020-12-31 17:49:11
+ * @LastEditTime: 2021-01-14 17:50:33
  * @Description: 工具类
  * @FilePath: \vue-template\src\utils\index.js
  */
@@ -13,7 +13,7 @@ const utils = {
   /**
    * @description: 从localStorage中读取属性值
    * @param {string} key
-   * @param {string} parse 是否将序列化的字符串转化为Object
+   * @param {boolean} parse 是否将序列化的字符串转化为Object
    * @return {string|object}
    */
   getItem(key, parse) {

@@ -2,11 +2,15 @@
 @import './styles/fonts/fonts.css';
 @import './styles/icons/icons.css';
 
+html,
+body {
+  height: 100%;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: $font-size;
+  height: 100%;
   color: $text-color;
+  font-size: $font-size;
   background-color: $bg-color;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
