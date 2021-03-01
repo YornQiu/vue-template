@@ -1,8 +1,8 @@
 /*
  * @Author: QY
  * @Date: 2020-01-01 00:00:00
- * @LastEditors: QY
- * @LastEditTime: 2021-01-14 17:49:58
+ * @LastEditors: yogurtq
+ * @LastEditTime: 2021-03-01 18:49:43
  * @Description: base css 基础样式类，已包含normalize.css
  * @FilePath: \vue-template\src\styles\base.css
  */
@@ -103,6 +103,9 @@
   white-space: pre;
 }
 .nowrap {
+  white-space: nowrap;
+}
+.ellipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
