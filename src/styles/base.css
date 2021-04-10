@@ -2,7 +2,7 @@
  * @Author: QY
  * @Date: 2020-01-01 00:00:00
  * @LastEditors: yogurtq
- * @LastEditTime: 2021-03-18 18:37:46
+ * @LastEditTime: 2021-04-11 00:04:47
  * @Description: base css 基础样式类，已包含normalize.css
  * @FilePath: \vue-template\src\styles\base.css
  */
@@ -159,6 +159,9 @@
 .mg8 {
   margin: 8px;
 }
+.mg10 {
+  margin: 10px;
+}
 .mg12 {
   margin: 12px;
 }
@@ -169,13 +172,19 @@
   margin: 20px;
 }
 .mg24 {
-  margin: 16px;
+  margin: 24px;
+}
+.mg30 {
+  margin: 30px;
 }
 .mg32 {
   margin: 32px;
 }
-.mg48 {
-  margin: 48px;
+.mg36 {
+  margin: 36px;
+}
+.mg40 {
+  margin: 40px;
 }
 
 .mt4 {
@@ -183,6 +192,9 @@
 }
 .mt8 {
   margin-top: 8px;
+}
+.mt10 {
+  margin-top: 10px;
 }
 .mt12 {
   margin-top: 12px;
@@ -194,35 +206,50 @@
   margin-top: 20px;
 }
 .mt24 {
-  margin-top: 16px;
+  margin-top: 24px;
+}
+.mt30 {
+  margin-top: 30px;
 }
 .mt32 {
   margin-top: 32px;
 }
-.mt48 {
-  margin-top: 48px;
+.mt36 {
+  margin-top: 36px;
+}
+.mt40 {
+  margin-top: 40px;
 }
 
-.ml4 {
-  margin-left: 4px;
+.mr4 {
+  margin-right: 4px;
 }
-.ml8 {
-  margin-left: 8px;
+.mr8 {
+  margin-right: 8px;
 }
-.ml16 {
-  margin-left: 16px;
+.mr10 {
+  margin-right: 10px;
 }
-.ml20 {
-  margin-left: 20px;
+.mr12 {
+  margin-right: 12px;
 }
-.ml24 {
-  margin-left: 24px;
+.mr16 {
+  margin-right: 16px;
 }
-.ml32 {
-  margin-left: 32px;
+.mr20 {
+  margin-right: 20px;
 }
-.ml48 {
-  margin-left: 48px;
+.mr24 {
+  margin-right: 24px;
+}
+.mr30 {
+  margin-right: 30px;
+}
+.mr32 {
+  margin-right: 32px;
+}
+.mr40 {
+  margin-right: 40px;
 }
 
 .mb4 {
@@ -230,6 +257,9 @@
 }
 .mb8 {
   margin-bottom: 8px;
+}
+.mb10 {
+  margin-bottom: 10px;
 }
 .mb12 {
   margin-bottom: 12px;
@@ -243,33 +273,51 @@
 .mb24 {
   margin-bottom: 24px;
 }
+.mb30 {
+  margin-bottom: 30px;
+}
 .mb32 {
   margin-bottom: 32px;
 }
-.mb48 {
-  margin-bottom: 48px;
+.mb36 {
+  margin-bottom: 36px;
+}
+.mb40 {
+  margin-bottom: 40px;
 }
 
-.mr4 {
-  margin-right: 4px;
+.ml4 {
+  margin-left: 4px;
 }
-.mr8 {
-  margin-right: 8px;
+.ml8 {
+  margin-left: 8px;
 }
-.mr12 {
-  margin-right: 12px;
+.ml10 {
+  margin-left: 10px;
 }
-.mr16 {
-  margin-right: 16px;
+.ml12 {
+  margin-left: 12px;
 }
-.mr24 {
-  margin-right: 24px;
+.ml16 {
+  margin-left: 16px;
 }
-.mr32 {
-  margin-right: 32px;
+.ml20 {
+  margin-left: 20px;
 }
-.mr48 {
-  margin-right: 48px;
+.ml24 {
+  margin-left: 24px;
+}
+.ml30 {
+  margin-left: 30px;
+}
+.ml32 {
+  margin-left: 32px;
+}
+.ml36 {
+  margin-left: 36px;
+}
+.ml40 {
+  margin-left: 40px;
 }
 
 .pd4 {
@@ -277,6 +325,9 @@
 }
 .pd8 {
   padding: 8px;
+}
+.pd10 {
+  padding: 10px;
 }
 .pd12 {
   padding: 12px;
@@ -290,11 +341,14 @@
 .pd24 {
   padding: 24px;
 }
+.pd30 {
+  padding: 30px;
+}
 .pd32 {
   padding: 32px;
 }
-.pd48 {
-  padding: 48px;
+.pd40 {
+  padding: 40px;
 }
 
 .pt4 {
@@ -302,6 +356,9 @@
 }
 .pt8 {
   padding-top: 8px;
+}
+.pt10 {
+  padding-top: 10px;
 }
 .pt12 {
   padding-top: 12px;
@@ -315,61 +372,14 @@
 .pt24 {
   padding-top: 24px;
 }
+.pt30 {
+  padding-top: 30px;
+}
 .pt32 {
   padding-top: 32px;
 }
-.pt48 {
-  padding-top: 48px;
-}
-
-.pl4 {
-  padding-left: 4px;
-}
-.pl8 {
-  padding-left: 8px;
-}
-.pl12 {
-  padding-left: 12px;
-}
-.pl16 {
-  padding-left: 16px;
-}
-.pl20 {
-  padding-left: 20px;
-}
-.pl24 {
-  padding-left: 24px;
-}
-.pl32 {
-  padding-left: 32px;
-}
-.pl48 {
-  padding-left: 48px;
-}
-
-.pb4 {
-  padding-bottom: 4px;
-}
-.pb8 {
-  padding-bottom: 8px;
-}
-.pb12 {
-  padding-bottom: 12px;
-}
-.pb16 {
-  padding-bottom: 16px;
-}
-.pb20 {
-  padding-bottom: 20px;
-}
-.pb24 {
-  padding-bottom: 24px;
-}
-.pb32 {
-  padding-bottom: 32px;
-}
-.pb48 {
-  padding-bottom: 48px;
+.pt40 {
+  padding-top: 40px;
 }
 
 .pr4 {
@@ -377,6 +387,9 @@
 }
 .pr8 {
   padding-right: 8px;
+}
+.pr10 {
+  padding-right: 10px;
 }
 .pr12 {
   padding-right: 12px;
@@ -390,11 +403,76 @@
 .pr24 {
   padding-right: 24px;
 }
+.pr30 {
+  padding-right: 30px;
+}
 .pr32 {
   padding-right: 32px;
 }
-.pr48 {
-  padding-right: 48px;
+.pr40 {
+  padding-right: 40px;
+}
+
+.pb4 {
+  padding-bottom: 4px;
+}
+.pb8 {
+  padding-bottom: 8px;
+}
+.pb10 {
+  padding-bottom: 10px;
+}
+.pb12 {
+  padding-bottom: 12px;
+}
+.pb16 {
+  padding-bottom: 16px;
+}
+.pb20 {
+  padding-bottom: 20px;
+}
+.pb24 {
+  padding-bottom: 24px;
+}
+.pb30 {
+  padding-bottom: 30px;
+}
+.pb32 {
+  padding-bottom: 32px;
+}
+.pb40 {
+  padding-bottom: 40px;
+}
+
+.pl4 {
+  padding-left: 4px;
+}
+.pl8 {
+  padding-left: 8px;
+}
+.pl10 {
+  padding-left: 10px;
+}
+.pl12 {
+  padding-left: 12px;
+}
+.pl16 {
+  padding-left: 16px;
+}
+.pl20 {
+  padding-left: 20px;
+}
+.pl24 {
+  padding-left: 24px;
+}
+.pl30 {
+  padding-left: 30px;
+}
+.pl32 {
+  padding-left: 32px;
+}
+.pl40 {
+  padding-left: 40px;
 }
 
 
