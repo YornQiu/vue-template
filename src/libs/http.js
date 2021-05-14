@@ -1,7 +1,7 @@
 /*
- * @Author: QY
+ * @Author: YogurtQ
  * @Date: 2020-12-15 11:44:23
- * @LastEditors: QY
+ * @LastEditors: YogurtQ
  * @LastEditTime: 2020-12-31 17:50:38
  * @Description: http
  * @FilePath: \vue-template\src\libs\http.js
