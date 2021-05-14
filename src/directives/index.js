@@ -1,8 +1,8 @@
 /*
- * @Author: yogurtq
+ * @Author: YogurtQ
  * @Date: 2021-04-10 20:33:12
- * @LastEditors: yogurtq
- * @LastEditTime: 2021-04-11 00:32:53
+ * @LastEditors: YogurtQ
+ * @LastEditTime: 2021-05-14 17:20:31
  * @Description: vue directives
  * @FilePath: \vue-template\src\directives\index.js
  */
@@ -89,10 +89,16 @@ const debounce = {
   }
 };
 
+const pin = (el, { arg = 'top', value = 0 }) => {
+  el.style.position = 'fixed';
+  el.style[arg] = value + 'px';
+};
+
 const directives = {
   focus,
   copy,
-  debounce
+  debounce,
+  pin
 };
 
 /**
@@ -101,7 +107,7 @@ const directives = {
 export default {
   install(Vue) {
     Object.keys(directives).forEach(key => {
-      Vue.directives(key, directives[key]);
+      Vue.directive(key, directives[key]);
     });
   }
 };

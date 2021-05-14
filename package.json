@@ -1,7 +1,7 @@
 {
   "name": "vue-template",
   "version": "0.1.0",
-  "author": "yogurtq",
+  "author": "YogurtQ",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -51,14 +51,14 @@
       "eslint:recommended",
       "@vue/prettier"
     ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
     "globals": {
       "_": true,
       "Dayjs": true,
       "$utils": true,
       "$http": true
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
     }
   },
   "browserslist": [

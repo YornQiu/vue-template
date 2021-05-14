@@ -5,9 +5,14 @@ import './registerServiceWorker';
 import router from './routers';
 import store from './store';
 
+import directives from '@/directives';
+import GlobalComponents from '@/components';
+
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);
+Vue.use(directives);
+Vue.use(GlobalComponents);
 
 new Vue({
   router,

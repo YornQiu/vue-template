@@ -1,8 +1,8 @@
-const proxy = process.env.DEV_SERVER_PROXY_URL || 'http://localhost:3001';
-const port = process.env.DEV_SERVER_PORT || 3001;
-
 const path = require('path');
 const webpack = require('webpack');
+
+const proxy = process.env.DEV_SERVER_PROXY_URL || 'http://localhost:10081';
+const port = process.env.DEV_SERVER_PORT || 10080;
 
 module.exports = {
   publicPath: '',
@@ -10,7 +10,12 @@ module.exports = {
   runtimeCompiler: true,
   devServer: {
     port,
-    proxy
+    proxy: {
+      '^/api': {
+        target: proxy,
+        changeOrigin: true
+      }
+    }
   },
   chainWebpack: config => {
     config.output.library('ycApp').libraryTarget('umd');
