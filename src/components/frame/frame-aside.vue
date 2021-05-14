@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'frame-aside',
+  name: 'frameAside',
   data() {
     return {};
   },
