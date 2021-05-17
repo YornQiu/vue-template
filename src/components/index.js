@@ -2,8 +2,8 @@
  * @Author: YogurtQ
  * @Date: 2021-05-14 17:01:47
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-05-14 17:02:01
- * @Description: file content
+ * @LastEditTime: 2021-05-17 23:29:05
+ * @Description: global components
  * @FilePath: \vue-template\src\components\index.js
  */
 
