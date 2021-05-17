@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <el-container>
+    <el-container direction="vertical">
       <FrameHeader></FrameHeader>
       <el-container>
         <FrameAside></FrameAside>

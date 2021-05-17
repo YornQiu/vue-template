@@ -9,7 +9,7 @@ import GlobalComponents from '@/components';
 
 Vue.config.productionTip = false;
 
-Vue.use(ElementUI);
+Vue.use(ElementUI, { size: 'medium' });
 Vue.use(directives);
 Vue.use(GlobalComponents);
 
