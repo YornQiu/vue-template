@@ -24,7 +24,7 @@ module.exports = {
     plugins: [
       new webpack.ProvidePlugin({
         _: 'lodash',
-        Dayjs: 'dayjs',
+        dayjs: 'dayjs',
         $utils: [path.resolve(__dirname, 'src/utils'), 'default'], // 非工具库的自定义全局变量统一在前面加上$
         $http: [path.resolve(__dirname, 'src/libs/http.js'), 'default']
       })

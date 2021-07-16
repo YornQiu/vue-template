@@ -54,7 +54,7 @@
     },
     "globals": {
       "_": true,
-      "Dayjs": true,
+      "dayjs": true,
       "$utils": true,
       "$http": true
     }

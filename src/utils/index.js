@@ -2,7 +2,7 @@
  * @Author: YogurtQ
  * @Date: 2020-12-16 15:35:55
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-04-12 23:32:50
+ * @LastEditTime: 2021-07-16 15:01:56
  * @Description: 工具类
  * @FilePath: \vue-template\src\utils\index.js
  */
@@ -83,6 +83,150 @@ const utils = {
     s[8] = s[13] = s[18] = s[23] = '-';
 
     return s.join('');
+  },
+
+  /**
+   * @description: 判断浏览器类型是否为IE
+   * @return {boolean}
+   */
+  isIE() {
+    const userAgent = navigator.userAgent;
+    return userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1 && userAgent.indexOf('Opera') === -1;
+  },
+
+  /**
+   * @description: 获取浏览器类型
+   * @return {string} 浏览器类型
+   */
+  getBrowser() {
+    const userAgent = navigator.userAgent;
+
+    if (userAgent.indexOf('Edge') > -1) {
+      return 'Edge';
+    }
+    if (userAgent.indexOf('Firefox') > -1) {
+      return 'Firefox';
+    }
+    if (userAgent.indexOf('Safari') > -1 && userAgent.indexOf('Chrome') == -1) {
+      return 'Safari';
+    }
+    if (userAgent.indexOf('Chrome') > -1 && userAgent.indexOf('Safari') > -1) {
+      return 'Chrome';
+    }
+    if (userAgent.indexOf('Opera') > -1 && userAgent.indexOf('MSIE') === -1) {
+      return 'Opera';
+    }
+
+    if (userAgent.indexOf('compatible') > -1 && userAgent.indexOf('MSIE') > -1) {
+      const reIE = new RegExp('MSIE (\\d+\\.\\d+);');
+      reIE.test(userAgent);
+      const IEVersion = parseFloat(RegExp['$1']);
+      if (IEVersion === 7) {
+        return 'IE7';
+      } else if (IEVersion === 8) {
+        return 'IE8';
+      } else if (IEVersion === 9) {
+        return 'IE9';
+      } else if (IEVersion === 10) {
+        return 'IE10';
+      } else if (IEVersion === 11) {
+        return 'IE11';
+      } else {
+        return 'IE';
+      }
+    }
+  },
+
+  uploadFile() {},
+
+  downloadFile() {},
+
+  /**
+   * @description: 将扁平数组转化为树或森林
+   * @param {array} nodes 节点数组
+   * @param {string} id 节点的id字段，默认为id
+   * @param {string} pid 节点的父节点id字段，默认为pid
+   * @param {string} children 节点的子节点字段，默认为children
+   * @return {array} 树或森林
+   */
+  generateTree(nodes, id = 'id', pid = 'pid', children = 'children') {
+    if (!Array.isArray(nodes)) {
+      return [];
+    }
+
+    const tree = [];
+    const treeMap = {};
+
+    for (const node of nodes) {
+      treeMap[node[id]] = node;
+    }
+
+    for (const node of nodes) {
+      const pNode = treeMap[node[pid]];
+
+      if (pNode) {
+        (pNode[children] || (pNode[children] = [])).push(node);
+      } else {
+        tree.push(node);
+      }
+    }
+
+    return tree;
+  },
+
+  /**
+   * @description: 广度优先遍历树
+   * @param {object|array} tree 树或森林
+   * @param {function} handler 用来处理树节点的方法
+   */
+  BFSTree(tree, handler) {
+    if (!tree || typeof tree !== 'object') return;
+
+    const queue = Array.isArray(tree) ? [...tree] : [tree];
+    let node;
+
+    while (queue.length) {
+      node = queue.shift();
+      handler && handler(node);
+      node.children && node.children.foEach(child => queue.push(child));
+    }
+  },
+
+  /**
+   * @description: 广度优先遍历树
+   * @param {object|array} tree 树或森林
+   * @param {function} handler 用来处理树节点的方法
+   */
+  DFSTree(tree, handler) {
+    if (!tree || typeof tree !== 'object') return;
+
+    const stack = Array.isArray(tree) ? [...tree] : [tree];
+    let node;
+
+    while (stack.length) {
+      node = stack.pop();
+      handler && handler(node);
+      node.children && node.children.forEach(child => stack.push(child));
+    }
+  },
+
+  /**
+   * @description: 获取树中的某一个节点，得到一个节点后直接返回，不会继续查找
+   * @param {object|array} tree 树或森林
+   * @param {string} id 要获取的节点id
+   * @return {object} 要获取的节点，未找到时返回undefined
+   */
+  getTreeNode(tree, id) {
+    if (!tree || typeof tree !== 'object') return;
+
+    const queue = Array.isArray(tree) ? [...tree] : [tree];
+    let node;
+
+    while (queue.length) {
+      node = queue.shift();
+      if (node.id === id) return node;
+      node.children && node.children.foEach(child => queue.push(child));
+    }
   },
 
   /**
