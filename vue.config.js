@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const proxy = process.env.DEV_SERVER_PROXY_URL || 'http://localhost:10081';
-const port = process.env.DEV_SERVER_PORT || 10080;
+const port = process.env.DEV_SERVER_PORT || 8880;
 
 module.exports = {
   publicPath: '',
@@ -44,7 +44,7 @@ module.exports = {
       favicon32: 'favicon.ico',
       appleTouchIcon: 'favicon.ico',
       maskIcon: 'favicon.ico',
-      msTileImage: 'favicon.ico',
+      msTileImage: 'favicon.ico'
     },
     workboxOptions: {
       skipWaiting: true,
