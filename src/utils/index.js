@@ -2,7 +2,7 @@
  * @Author: YogurtQ
  * @Date: 2020-12-16 15:35:55
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-07-16 15:01:56
+ * @LastEditTime: 2021-08-04 18:46:24
  * @Description: 工具类
  * @FilePath: \vue-template\src\utils\index.js
  */
@@ -96,7 +96,7 @@ const utils = {
 
   /**
    * @description: 获取浏览器类型
-   * @return {string} 浏览器类型
+   * @return {string} 浏览器类型：Edge、Firefox、Safari、Chrome、Opera、IE
    */
   getBrowser() {
     const userAgent = navigator.userAgent;
@@ -137,9 +137,135 @@ const utils = {
     }
   },
 
-  uploadFile() {},
+  /**
+   * @description: 选择文件，使用input输入框选择文件
+   * @param {object} option 配置选项，可选配置项为：multiple，是否支持多选，默认false；accept，接受的文件类型，默认全部
+   * @return {promise} Promise对象，内容为input[file]返回的文件列表
+   */
+  selectFile(option = {}) {
+    return new Promise((resolve, reject) => {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.multiple = option.multiple || false;
+      input.accept = option.accept || '';
 
-  downloadFile() {},
+      input.onchange = function(e) {
+        resolve(e.target.files);
+      };
+      input.onabort = function() {
+        reject();
+      };
+
+      input.click();
+    });
+  },
+
+  /**
+   * @description: 通过xhr请求上传文件
+   * @param {string} url 请求地址
+   * @param {object} option 配置选项，支持multiple(多选)，accept(接受的文件类型)，params(请求参数)，beforeSelect(选择文件之前的钩子)，beforeUpload(上传文件之前的钩子)，onprogress(下载进度回调函数)
+   * @return {promise} 包含请求结果的Promise对象
+   */
+  async uploadFile(url, option = {}) {
+    const { beforeSelect, beforeUpload, onprogress, params } = option;
+
+    beforeSelect && beforeSelect();
+
+    const files = await this.selectFile(option);
+    const fd = new FormData();
+    files.forEach(file => fd.append('files', file, file.name));
+    params && Object.keys(params).forEach(k => fd.append(k, params[k]));
+
+    beforeUpload && beforeUpload();
+
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          resolve(xhr.response);
+        } else {
+          reject(xhr.response);
+        }
+      };
+      xhr.onerror = function() {
+        reject(xhr.response);
+      };
+
+      if (onprogress) {
+        xhr.upload.onprogress = e => onprogress(e);
+      }
+
+      xhr.send(fd);
+    });
+  },
+
+  /**
+   * @description: 通过xhr请求下载文件
+   * @param {string} url 请求地址
+   * @param {object} option 配置选项，支持 method(请求方法)，params(请求参数)，type(参数类型)，name(文件名)，onprogress(下载进度回调函数)
+   * @return {promise} 包含请求结果的Promise对象
+   */
+  downloadFileAjax(url, option = {}) {
+    const { method, type, params, name, onprogress } = option;
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open(method || 'get', url, true);
+      xhr.responseType = 'blob';
+      xhr.setRequestHeader('Content-Type', type === 'json' ? 'application/json; charset=utf-8' : 'application/x-www-form-urlencoded');
+
+      const _params =
+        typeof params === 'object'
+          ? type === 'json'
+            ? JSON.stringify(params)
+            : Object.entries(params)
+                .map(item => item.join('='))
+                .join('&')
+          : params;
+
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          const blob = xhr.response;
+          const fileName = xhr.getResponseHeader('Content-Disposition').substring(20);
+          this.downloadFile(name || decodeURIComponent(fileName), blob); //解码名称
+          resolve();
+        } else {
+          reject(xhr.response);
+        }
+      };
+      xhr.onerror = function() {
+        reject(xhr.response);
+      };
+
+      if (onprogress) {
+        xhr.onprogress = e => onprogress(e);
+      }
+
+      xhr.send(null || _params);
+    });
+  },
+
+  /**
+   * @description: 文件下载
+   * @param {string} fileName 文件名
+   * @param {object|string} content 文件内容或文件地址
+   */
+  downloadFile(fileName, content) {
+    const a = document.createElement('a');
+    a.download = fileName;
+    a.style.display = 'none';
+
+    if (typeof content === 'string') {
+      a.href = content; // content为文件地址
+    } else {
+      const blob = new Blob([content]);
+      a.href = URL.createObjectURL(blob); // content为文件内容
+    }
+
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  },
 
   /**
    * @description: 将扁平数组转化为树或森林
