@@ -2,7 +2,7 @@
  * @Author: YogurtQ
  * @Date: 2021-04-10 20:33:12
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-05-14 17:20:31
+ * @LastEditTime: 2021-08-07 00:37:44
  * @Description: vue directives
  * @FilePath: \vue-template\src\directives\index.js
  */
@@ -12,7 +12,7 @@
  * 自动聚焦元素
  */
 const focus = {
-  inserted: function(el) {
+  inserted(el) {
     el.focus();
   }
 };
@@ -76,7 +76,7 @@ const copy = {
  * 防抖
  */
 const debounce = {
-  inserted: function(el, { value, arg }) {
+  inserted(el, { value, arg }) {
     let timer;
     el.addEventListener('keyup', () => {
       if (timer) {
@@ -85,6 +85,20 @@ const debounce = {
       timer = setTimeout(() => {
         value();
       }, arg || 800);
+    });
+  }
+};
+
+const throttle = {
+  inserted(el, { value, arg }) {
+    let timer;
+    el.addEventListener('keyup', () => {
+      if (!timer) {
+        timer = setTimeout(() => {
+          value();
+          timer = null;
+        }, arg || 800);
+      }
     });
   }
 };
@@ -98,6 +112,7 @@ const directives = {
   focus,
   copy,
   debounce,
+  throttle,
   pin
 };
 
