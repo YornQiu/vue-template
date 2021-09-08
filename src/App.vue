@@ -29,8 +29,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/styles/index.scss';
-
 #app > .el-container {
   height: 100%;
 }

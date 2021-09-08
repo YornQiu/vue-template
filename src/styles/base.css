@@ -2,7 +2,7 @@
  * @Author: YogurtQ
  * @Date: 2020-01-01 00:00:00
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-05-13 00:44:56
+ * @LastEditTime: 2021-09-08 16:13:27
  * @Description: base css 基础样式类，已包含normalize.css
  * @FilePath: \vue-template\src\styles\base.css
  */
@@ -61,6 +61,14 @@
 }
 .flex4 {
   flex: 4;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
 }
 
 .vt {

@@ -4,6 +4,8 @@ import App from './App.vue';
 import router from './routers';
 import store from './store';
 
+import '@/styles/index.scss';
+
 import directives from '@/directives';
 import GlobalComponents from '@/components';
 
