@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .frame-header {
   color: #fff;
   height: 60px;

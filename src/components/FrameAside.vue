@@ -14,7 +14,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .frame-aside {
   width: 300px;
   height: 100%;
