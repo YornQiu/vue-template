@@ -1,8 +1,8 @@
 /*
  * @Author: YogurtQ
  * @Date: 2020-12-15 11:44:23
- * @LastEditors: YogurtQ
- * @LastEditTime: 2020-12-31 17:50:38
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2021-09-09 09:28:11
  * @Description: http
  * @FilePath: \vue-template\src\libs\http.js
  */
@@ -63,7 +63,7 @@ const http = (method, url, params, config) =>
     // 若需其他配置，在此处添加。切勿使用 ...config 等不安全的方式
   });
 
-export default {
+const $http = {
   /**
    * get，参数为Object，会自动转化为query形式并添加在地址之后
    * @param {string} url 地址
@@ -101,3 +101,15 @@ export default {
     return http('DELETE', url, params, config);
   }
 };
+
+$http.setAuthorization = auth => {
+  instance.defaults.headers.common['Authorization'] = auth;
+  instance.defaults.headers['Authorization'] = auth;
+};
+
+$http.removeAuthorization = () => {
+  instance.defaults.headers.common['Authorization'] = '';
+  instance.defaults.headers['Authorization'] = '';
+};
+
+export default $http;

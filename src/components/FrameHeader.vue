@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'frameHeader',
+  name: 'FrameHeader',
   data() {
     return {};
   },
