@@ -2,7 +2,7 @@
  * @Author: YogurtQ
  * @Date: 2020-01-01 00:00:00
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-09-08 16:13:27
+ * @LastEditTime: 2021-09-14 17:57:04
  * @Description: base css 基础样式类，已包含normalize.css
  * @FilePath: \vue-template\src\styles\base.css
  */
@@ -63,6 +63,14 @@
   flex: 4;
 }
 
+.ai-baseline {
+  align-items: baseline;
+}
+
+.ai-center {
+  align-items: center;
+}
+
 .w100 {
   width: 100%;
 }
@@ -110,6 +118,22 @@
 /**
  * 文本
  */
+.fs12 {
+  font-size: 12px;
+}
+.fs14 {
+  font-size: 14px;
+}
+.fs16 {
+  font-size: 16px;
+}
+.fs18 {
+  font-size: 18px;
+}
+.fs20 {
+  font-size: 20px;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -161,6 +185,9 @@
 /**
  * 间距
  */
+.mg0 {
+  margin: 0;
+}
 .mg4 {
   margin: 4px;
 }
@@ -195,6 +222,9 @@
   margin: 40px;
 }
 
+.mt0 {
+  margin-top: 0;
+}
 .mt4 {
   margin-top: 4px;
 }
@@ -229,6 +259,9 @@
   margin-top: 40px;
 }
 
+.mr0 {
+  margin-right: 0;
+}
 .mr4 {
   margin-right: 4px;
 }
@@ -260,6 +293,9 @@
   margin-right: 40px;
 }
 
+.mb0 {
+  margin-bottom: 0;
+}
 .mb4 {
   margin-bottom: 4px;
 }
@@ -294,6 +330,9 @@
   margin-bottom: 40px;
 }
 
+.ml0 {
+  margin-left: 0;
+}
 .ml4 {
   margin-left: 4px;
 }
@@ -328,6 +367,9 @@
   margin-left: 40px;
 }
 
+.pd0 {
+  padding: 0;
+}
 .pd4 {
   padding: 4px;
 }
@@ -359,6 +401,9 @@
   padding: 40px;
 }
 
+.pt0 {
+  padding-top: 0;
+}
 .pt4 {
   padding-top: 4px;
 }
@@ -390,6 +435,9 @@
   padding-top: 40px;
 }
 
+.pr0 {
+  padding-right: 0;
+}
 .pr4 {
   padding-right: 4px;
 }
@@ -421,6 +469,9 @@
   padding-right: 40px;
 }
 
+.pb0 {
+  padding-bottom: 0;
+}
 .pb4 {
   padding-bottom: 4px;
 }
@@ -452,6 +503,9 @@
   padding-bottom: 40px;
 }
 
+.pl0 {
+  padding-left: 0;
+}
 .pl4 {
   padding-left: 4px;
 }

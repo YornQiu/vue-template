@@ -2,24 +2,24 @@
  * @Author: YogurtQ
  * @Date: 2021-01-18 09:06:38
  * @LastEditors: YogurtQ
- * @LastEditTime: 2021-05-13 00:45:10
+ * @LastEditTime: 2021-09-10 11:00:45
  * @Description: 样式覆盖
  * @FilePath: \vue-template\src\styles\cover.scss
  */
-
+ 
 /* 
  * 变量覆盖 
  * 仅包含常用变量，其他所有变量可参见element-ui目录下的var.scss
  */
 // 主题色 * 5
-$--color-primary: #0366d6 !default;
-$--color-success: #20b689 !default;
-$--color-warning: #dfa11c !default;
-$--color-danger: #e62a52 !default;
-$--color-info: #4d77cc !default;
+$--color-primary: #19539b !default;
+$--color-success: #67C23A !default;
+$--color-warning: #E6A23C !default;
+$--color-danger: #F56C6C !default;
+$--color-info: #909399 !default;
 
 // 文字颜色
-$--color-text-primary: #E6E1C2 !default;
+$--color-text-primary: #303133 !default;
 $--color-text-regular: #606266 !default;
 $--color-text-secondary: #909399 !default;
 $--color-text-placeholder: #C0C4CC !default;
@@ -31,7 +31,8 @@ $--border-color-lighter: #EBEEF5 !default;
 $--border-color-extra-light: #F2F6FC !default;
 
 // 背景颜色
-$--background-color-base: #051932 !default;
+$--background-color-white: #e9eef3 !default;
+$--background-color-black: #051932 !default;
 
 /* -------------------------- */
 
