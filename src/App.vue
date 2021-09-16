@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import FrameHeader from '@/components/frame/FrameAside';
-import FrameAside from '@/components/frame/FrameHeader';
+import FrameHeader from '@/components/FrameAside';
+import FrameAside from '@/components/FrameHeader';
 
 export default {
   name: 'App',

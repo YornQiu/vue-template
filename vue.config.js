@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const proxy = process.env.DEV_SERVER_PROXY_URL || 'http://localhost:10081';
+const proxy = process.env.DEV_SERVER_PROXY_URL || 'http://localhost:8881';
 const port = process.env.DEV_SERVER_PORT || 8880;
 
 module.exports = {
