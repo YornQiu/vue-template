@@ -1,7 +1,7 @@
 /*
- * @Author: YogurtQ
+ * @Author: YornQiu
  * @Date: 2021-04-10 20:33:12
- * @LastEditors: YogurtQ
+ * @LastEditors: YornQiu
  * @LastEditTime: 2021-08-07 00:37:44
  * @Description: vue directives
  * @FilePath: \vue-template\src\directives\index.js

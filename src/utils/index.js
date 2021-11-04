@@ -1,7 +1,7 @@
 /*
- * @Author: YogurtQ
+ * @Author: YornQiu
  * @Date: 2020-12-16 15:35:55
- * @LastEditors: Yorn Qiu
+ * @LastEditors: YornQiu
  * @LastEditTime: 2021-09-14 18:22:29
  * @Description: 工具类
  * @FilePath: \vue-template\src\utils\index.js

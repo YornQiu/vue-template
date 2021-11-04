@@ -1,7 +1,7 @@
 /*
- * @Author: YogurtQ
+ * @Author: YornQiu
  * @Date: 2020-12-03 16:44:42
- * @LastEditors: YogurtQ
+ * @LastEditors: YornQiu
  * @LastEditTime: 2020-12-31 17:49:01
  * @Description: 数值格式化工具
  * @FilePath: \vue-template\src\utils\numberUtils.js

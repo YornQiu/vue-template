@@ -1,7 +1,7 @@
 /*
- * @Author: YogurtQ
+ * @Author: YornQiu
  * @Date: 2021-09-14 11:17:45
- * @LastEditors: YogurtQ
+ * @LastEditors: YornQiu
  * @LastEditTime: 2021-09-14 18:24:10
  * @Description: 输入校验工具
  * @FilePath: \vue-template\src\utils\validateUtils.js
