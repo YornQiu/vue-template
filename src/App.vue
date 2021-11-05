@@ -1,23 +1,21 @@
 <template>
-  <div id="app">
-    <el-container direction="vertical">
-      <FrameHeader></FrameHeader>
-      <el-container>
-        <FrameAside></FrameAside>
-        <el-main class="frame-content">
-          <router-view />
-        </el-main>
-      </el-container>
-      <el-footer>
-        Footer
-      </el-footer>
+  <div id="app" class="dfc">
+    <FrameHeader></FrameHeader>
+    <el-container>
+      <FrameAside></FrameAside>
+      <el-main class="frame-content">
+        <router-view />
+      </el-main>
     </el-container>
+    <el-footer>
+      Footer
+    </el-footer>
   </div>
 </template>
 
 <script>
-import FrameHeader from '@/components/FrameAside';
-import FrameAside from '@/components/FrameHeader';
+import FrameHeader from '@/components/FrameHeader';
+import FrameAside from '@/components/FrameAside';
 
 export default {
   name: 'App',
@@ -29,9 +27,6 @@ export default {
 </script>
 
 <style lang="scss">
-#app > .el-container {
-  height: 100%;
-}
 .frame-content {
   background-color: $bg-color-content;
 }
