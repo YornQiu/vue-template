@@ -1,36 +1,27 @@
 <template>
   <div id="app" class="dfc">
-    <FrameHeader></FrameHeader>
+    <TheFrameHeader />
     <el-container>
-      <FrameAside></FrameAside>
+      <TheFrameAside />
       <el-main class="frame-content">
         <router-view />
       </el-main>
     </el-container>
-    <el-footer>
-      Footer
-    </el-footer>
+    <TheFrameFooter />
   </div>
 </template>
 
 <script>
-import FrameHeader from '@/components/FrameHeader';
-import FrameAside from '@/components/FrameAside';
+import TheFrameHeader from '@/components/frame/TheFrameHeader';
+import TheFrameFooter from '@/components/frame/TheFrameFooter';
+import TheFrameAside from '@/components/frame/TheFrameAside';
 
 export default {
   name: 'App',
   components: {
-    FrameHeader,
-    FrameAside
+    TheFrameHeader,
+    TheFrameFooter,
+    TheFrameAside
   }
 };
 </script>
-
-<style lang="scss">
-.frame-content {
-  background-color: $bg-color-content;
-}
-.el-footer {
-  border-top: 1px solid #eaecef;
-}
-</style>

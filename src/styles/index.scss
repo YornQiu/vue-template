@@ -15,3 +15,22 @@ body {
   background-color: $bg-color;
   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
+
+.frame-header {
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: $bg-color-header;
+}
+.frame-aside {
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid #eaecef;
+}
+.frame-content {
+  background-color: $bg-color-content;
+}
+.frame-footer {
+  border-top: 1px solid #eaecef;
+}
