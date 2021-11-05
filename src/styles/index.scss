@@ -26,11 +26,12 @@ body {
 .frame-aside {
   width: 300px;
   height: 100%;
-  border-right: 1px solid #eaecef;
+  background-color: $bg-color-aside;
 }
 .frame-content {
   background-color: $bg-color-content;
 }
 .frame-footer {
-  border-top: 1px solid #eaecef;
+  height: 50px;
+  background-color: $bg-color-footer;
 }
