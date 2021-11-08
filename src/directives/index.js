@@ -2,9 +2,9 @@
  * @Author: YornQiu
  * @Date: 2021-04-10 20:33:12
  * @LastEditors: YornQiu
- * @LastEditTime: 2021-08-07 00:37:44
+ * @LastEditTime: 2021-11-08 10:12:26
  * @Description: vue directives
- * @FilePath: \vue-template\src\directives\index.js
+ * @FilePath: /vue-template/src/directives/index.js
  */
 
 /**
@@ -89,6 +89,10 @@ const debounce = {
   }
 };
 
+/**
+ * v-throttle="handler"
+ * 节流
+ */
 const throttle = {
   inserted(el, { value, arg }) {
     let timer;

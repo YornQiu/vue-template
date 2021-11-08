@@ -18,7 +18,7 @@ module.exports = {
     }
   },
   chainWebpack: config => {
-    config.output.library('ycApp').libraryTarget('umd');
+    config.output.library('vApp').libraryTarget('umd');
   },
   configureWebpack: {
     plugins: [

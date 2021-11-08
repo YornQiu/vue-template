@@ -2,9 +2,9 @@
  * @Author: YornQiu
  * @Date: 2020-01-01 00:00:00
  * @LastEditors: YornQiu
- * @LastEditTime: 2021-09-14 17:57:04
+ * @LastEditTime: 2021-11-08 10:15:42
  * @Description: base css 基础样式类，已包含normalize.css
- * @FilePath: \vue-template\src\styles\base.css
+ * @FilePath: /vue-template/src/styles/base.css
  */
 
 /**
@@ -144,11 +144,11 @@
   font-style: italic;
 }
 
-.wrap {
-  white-space: normal;
-}
 .pre {
   white-space: pre;
+}
+.wrap {
+  white-space: normal;
 }
 .nowrap {
   white-space: nowrap;
