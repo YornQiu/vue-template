@@ -2,9 +2,9 @@
  * @Author: YornQiu
  * @Date: 2021-09-14 11:17:45
  * @LastEditors: YornQiu
- * @LastEditTime: 2021-09-14 18:24:10
+ * @LastEditTime: 2021-11-08 12:30:11
  * @Description: 输入校验工具
- * @FilePath: \vue-template\src\utils\validateUtils.js
+ * @FilePath: /vue-template/src/utils/validateUtils.js
  */
 
 const validateUtils = {
@@ -346,4 +346,4 @@ const validateUtils = {
   }
 };
 
-export default Object.freeze(validateUtils);
+export default validateUtils;
