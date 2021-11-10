@@ -4,6 +4,7 @@
   "author": "YornQiu",
   "private": true,
   "scripts": {
+    "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:test": "vue-cli-service build --mode test",
