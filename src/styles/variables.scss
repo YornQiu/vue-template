@@ -36,7 +36,7 @@ $font-size-l: 18px;
 @mixin borderWidth($width: $border-width) {
   border: $width $border-type $border-color;
 }
-@mixin borderType($type: solid) {
+@mixin borderType($type: $border-type) {
   border: $border-width $type $border-color;
 }
 @mixin borderColor($color: $border-color) {
