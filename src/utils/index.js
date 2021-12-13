@@ -2,9 +2,9 @@
  * @Author: YornQiu
  * @Date: 2020-12-16 15:35:55
  * @LastEditors: YornQiu
- * @LastEditTime: 2021-09-14 18:22:29
+ * @LastEditTime: 2021-12-13 09:51:09
  * @Description: 工具类
- * @FilePath: \vue-template\src\utils\index.js
+ * @FilePath: /vue-template/src/utils/index.js
  */
 
 import numberUtils from '@/utils/numberUtils';
@@ -315,7 +315,7 @@ const utils = {
     while (queue.length) {
       node = queue.shift();
       handler && handler(node);
-      node.children && node.children.foEach(child => queue.push(child));
+      node.children && node.children.forEach(child => queue.push(child));
     }
   },
 
@@ -352,7 +352,7 @@ const utils = {
     while (queue.length) {
       node = queue.shift();
       if (node.id === id) return node;
-      node.children && node.children.foEach(child => queue.push(child));
+      node.children && node.children.forEach(child => queue.push(child));
     }
   }
 };
