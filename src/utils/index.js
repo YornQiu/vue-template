@@ -2,7 +2,7 @@
  * @Author: YornQiu
  * @Date: 2020-12-16 15:35:55
  * @LastEditors: YornQiu
- * @LastEditTime: 2021-12-13 09:51:09
+ * @LastEditTime: 2021-12-16 11:50:54
  * @Description: 工具类
  * @FilePath: /vue-template/src/utils/index.js
  */
@@ -354,6 +354,24 @@ const utils = {
       if (node.id === id) return node;
       node.children && node.children.forEach(child => queue.push(child));
     }
+  },
+
+  /**
+   * @description: 判断元素是否进入可视区域
+   * @param {Element} el 元素
+   * @param {number} offset 偏移值
+   * @return {boolean}
+   */
+  isInViewPort(el, offset) {
+    const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+    if (el.getBoundingClientRect) {
+      return el.getBoundingClientRect().top <= viewPortHeight + offset;
+    }
+
+    const offsetTop = el.offsetTop;
+    const scrollTop = document.documentElement.scrollTop;
+    return offsetTop - scrollTop <= viewPortHeight + offset;
   }
 };
 
