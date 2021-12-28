@@ -2,7 +2,7 @@
  * @Author: YornQiu
  * @Date: 2020-12-16 15:35:55
  * @LastEditors: YornQiu
- * @LastEditTime: 2021-12-16 11:50:54
+ * @LastEditTime: 2021-12-28 10:11:30
  * @Description: 工具类
  * @FilePath: /vue-template/src/utils/index.js
  */
@@ -182,14 +182,14 @@ const utils = {
     return new Promise((resolve, reject) => {
       const xhr = new XMLHttpRequest();
       xhr.open('POST', url);
-      xhr.onload = function() {
+      xhr.onload = () => {
         if (xhr.status === 200) {
           resolve(xhr.response);
         } else {
           reject(xhr.response);
         }
       };
-      xhr.onerror = function() {
+      xhr.onerror = () => {
         reject(xhr.response);
       };
 
@@ -224,7 +224,7 @@ const utils = {
                 .join('&')
           : params;
 
-      xhr.onload = function() {
+      xhr.onload = () => {
         if (xhr.status === 200) {
           const blob = xhr.response;
           const fileName = xhr.getResponseHeader('Content-Disposition').substring(20);
@@ -234,7 +234,7 @@ const utils = {
           reject(xhr.response);
         }
       };
-      xhr.onerror = function() {
+      xhr.onerror = () => {
         reject(xhr.response);
       };
 
