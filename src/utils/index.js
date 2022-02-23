@@ -1,8 +1,8 @@
 /*
- * @Author: YornQiu
+ * @Author: Yorn Qiu
  * @Date: 2020-12-16 15:35:55
- * @LastEditors: YornQiu
- * @LastEditTime: 2021-12-28 10:11:30
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2022-02-23 12:25:06
  * @Description: 工具类
  * @FilePath: /vue-template/src/utils/index.js
  */
@@ -150,10 +150,10 @@ const utils = {
       input.multiple = option.multiple || false;
       input.accept = option.accept || '';
 
-      input.onchange = function(e) {
+      input.onchange = function (e) {
         resolve(e.target.files);
       };
-      input.onabort = function() {
+      input.onabort = function () {
         reject();
       };
 
@@ -174,8 +174,8 @@ const utils = {
 
     const files = await this.selectFile(option);
     const fd = new FormData();
-    files.forEach(file => fd.append('files', file, file.name));
-    params && Object.keys(params).forEach(k => fd.append(k, params[k]));
+    files.forEach((file) => fd.append('files', file, file.name));
+    params && Object.keys(params).forEach((k) => fd.append(k, params[k]));
 
     beforeUpload && beforeUpload();
 
@@ -194,7 +194,7 @@ const utils = {
       };
 
       if (onprogress) {
-        xhr.upload.onprogress = e => onprogress(e);
+        xhr.upload.onprogress = (e) => onprogress(e);
       }
 
       xhr.send(fd);
@@ -220,7 +220,7 @@ const utils = {
           ? type === 'json'
             ? JSON.stringify(params)
             : Object.entries(params)
-                .map(item => item.join('='))
+                .map((item) => item.join('='))
                 .join('&')
           : params;
 
@@ -239,7 +239,7 @@ const utils = {
       };
 
       if (onprogress) {
-        xhr.onprogress = e => onprogress(e);
+        xhr.onprogress = (e) => onprogress(e);
       }
 
       xhr.send(null || _params);
@@ -315,7 +315,7 @@ const utils = {
     while (queue.length) {
       node = queue.shift();
       handler && handler(node);
-      node.children && node.children.forEach(child => queue.push(child));
+      node.children && node.children.forEach((child) => queue.push(child));
     }
   },
 
@@ -333,7 +333,7 @@ const utils = {
     while (stack.length) {
       node = stack.pop();
       handler && handler(node);
-      node.children && node.children.forEach(child => stack.push(child));
+      node.children && node.children.forEach((child) => stack.push(child));
     }
   },
 
@@ -352,7 +352,7 @@ const utils = {
     while (queue.length) {
       node = queue.shift();
       if (node.id === id) return node;
-      node.children && node.children.forEach(child => queue.push(child));
+      node.children && node.children.forEach((child) => queue.push(child));
     }
   },
 
@@ -372,7 +372,7 @@ const utils = {
     const offsetTop = el.offsetTop;
     const scrollTop = document.documentElement.scrollTop;
     return offsetTop - scrollTop <= viewPortHeight + offset;
-  }
+  },
 };
 
 export default Object.freeze({ ...utils, numberUtils, validateUtils });

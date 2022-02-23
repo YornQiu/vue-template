@@ -1,8 +1,8 @@
 /*
- * @Author: YornQiu
+ * @Author: Yorn Qiu
  * @Date: 2021-09-14 11:17:45
- * @LastEditors: YornQiu
- * @LastEditTime: 2021-11-08 12:30:11
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2022-02-23 12:25:12
  * @Description: 输入校验工具
  * @FilePath: /vue-template/src/utils/validateUtils.js
  */
@@ -282,7 +282,7 @@ const validateUtils = {
       71: '台湾',
       81: '香港',
       82: '澳门',
-      91: '国外'
+      91: '国外',
     };
     if (!aCity[parseInt(value.substr(0, 2))]) {
       cb && cb({ valid: false, msg: '身份证地区非法' });
@@ -343,7 +343,7 @@ const validateUtils = {
       return false;
     }
     return true;
-  }
+  },
 };
 
 export default validateUtils;

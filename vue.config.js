@@ -13,11 +13,11 @@ module.exports = {
     proxy: {
       '^/api': {
         target: proxy,
-        changeOrigin: true
-      }
-    }
+        changeOrigin: true,
+      },
+    },
   },
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.output.library('vApp').libraryTarget('umd');
   },
   configureWebpack: {
@@ -26,16 +26,16 @@ module.exports = {
         _: 'lodash',
         dayjs: 'dayjs',
         $utils: [path.resolve(__dirname, 'src/utils'), 'default'], // 非工具库的自定义全局变量统一在前面加上$
-        $http: [path.resolve(__dirname, 'src/libs/http.js'), 'default']
-      })
-    ]
+        $http: [path.resolve(__dirname, 'src/libs/http.js'), 'default'],
+      }),
+    ],
   },
   css: {
     loaderOptions: {
       sass: {
-        prependData: `@import '@/styles/variables.scss';`
-      }
-    }
+        additionalData: `@import '@/styles/variables.scss';`,
+      },
+    },
   },
   pwa: {
     iconPaths: {
@@ -44,7 +44,7 @@ module.exports = {
       favicon32: 'favicon.ico',
       appleTouchIcon: 'favicon.ico',
       maskIcon: 'favicon.ico',
-      msTileImage: 'favicon.ico'
-    }
-  }
+      msTileImage: 'favicon.ico',
+    },
+  },
 };

@@ -1,11 +1,9 @@
 <template>
-  <header class="frame-header">
-    Header
-  </header>
+  <header class="frame-header">Header</header>
 </template>
 
 <script>
 export default {
-  name: 'TheFrameHeader'
+  name: 'TheFrameHeader',
 };
 </script>

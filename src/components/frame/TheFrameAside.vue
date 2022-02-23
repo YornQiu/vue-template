@@ -1,11 +1,9 @@
 <template>
-  <aside class="frame-aside">
-    Aside
-  </aside>
+  <aside class="frame-aside">Aside</aside>
 </template>
 
 <script>
 export default {
-  name: 'TheFrameAside'
+  name: 'TheFrameAside',
 };
 </script>

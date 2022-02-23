@@ -6,15 +6,15 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "Home" */ './views/Home.vue')
-  }
+    name: 'home',
+    component: () => import(/* webpackChunkName: "Home" */ './views/HomeView.vue'),
+  },
 ];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 export default router;

@@ -21,7 +21,7 @@ export default {
   components: {
     TheFrameHeader,
     TheFrameFooter,
-    TheFrameAside
-  }
+    TheFrameAside,
+  },
 };
 </script>

@@ -1,8 +1,8 @@
 /*
- * @Author: YornQiu
+ * @Author: Yorn Qiu
  * @Date: 2021-04-10 20:33:12
- * @LastEditors: YornQiu
- * @LastEditTime: 2021-11-08 10:12:26
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2022-02-23 12:26:35
  * @Description: vue directives
  * @FilePath: /vue-template/src/directives/index.js
  */
@@ -14,7 +14,7 @@
 const focus = {
   inserted(el) {
     el.focus();
-  }
+  },
 };
 
 /**
@@ -68,7 +68,7 @@ const copy = {
   // 指令与元素解绑的时候，移除事件绑定
   unbind(el) {
     el.removeEventListener('click', el.handler);
-  }
+  },
 };
 
 /**
@@ -86,7 +86,7 @@ const debounce = {
         value();
       }, arg || 800);
     });
-  }
+  },
 };
 
 /**
@@ -104,7 +104,7 @@ const throttle = {
         }, arg || 800);
       }
     });
-  }
+  },
 };
 
 const pin = (el, { arg = 'top', value = 0 }) => {
@@ -117,7 +117,7 @@ const directives = {
   copy,
   debounce,
   throttle,
-  pin
+  pin,
 };
 
 /**
@@ -125,8 +125,8 @@ const directives = {
  */
 export default {
   install(Vue) {
-    Object.keys(directives).forEach(key => {
+    Object.keys(directives).forEach((key) => {
       Vue.directive(key, directives[key]);
     });
-  }
+  },
 };

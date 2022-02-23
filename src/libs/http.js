@@ -1,10 +1,10 @@
 /*
- * @Author: YornQiu
+ * @Author: Yorn Qiu
  * @Date: 2020-12-15 11:44:23
- * @LastEditors: YornQiu
- * @LastEditTime: 2021-09-14 18:19:14
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2022-02-23 12:26:09
  * @Description: http
- * @FilePath: \vue-template\src\libs\http.js
+ * @FilePath: /vue-template/src/libs/http.js
  */
 import axios from 'axios';
 import qs from 'qs';
@@ -17,20 +17,20 @@ const AUTH_TOKEN = $utils.getItem('access_token');
 const instance = axios.create({
   baseURL: process.env.VUE_APP_BASEURL,
   headers: {
-    Authorization: `${TOKEN_TYPE} ${AUTH_TOKEN}`
-  }
+    Authorization: `${TOKEN_TYPE} ${AUTH_TOKEN}`,
+  },
 });
 
 // 对请求进行拦截
 instance.interceptors.request.use(
-  config => config,
-  error => Promise.reject(error)
+  (config) => config,
+  (error) => Promise.reject(error)
 );
 
 // 对响应进行拦截
 instance.interceptors.response.use(
-  res => res.data,
-  error => {
+  (res) => res.data,
+  (error) => {
     if (error.response) {
       if (error.response.status === 401) {
         Message.error('身份状态失效，请重新登录');
@@ -58,8 +58,8 @@ const http = (method, url, params, config) =>
     params: method === 'GET' || method === 'DELETE' ? params : null,
     responseType: config?.responseType || 'json',
     headers: {
-      'Content-Type': config?.contentType || 'application/json; charset=UTF-8'
-    }
+      'Content-Type': config?.contentType || 'application/json; charset=UTF-8',
+    },
     // 若需其他配置，在此处添加。切勿使用 ...config 等不安全的方式
   });
 
@@ -99,10 +99,10 @@ const $http = {
   },
   delete(url, params, config) {
     return http('DELETE', url, params, config);
-  }
+  },
 };
 
-$http.setAuthorization = auth => {
+$http.setAuthorization = (auth) => {
   instance.defaults.headers.common['Authorization'] = auth;
   instance.defaults.headers['Authorization'] = auth;
 };

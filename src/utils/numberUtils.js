@@ -1,10 +1,10 @@
 /*
- * @Author: YornQiu
+ * @Author: Yorn Qiu
  * @Date: 2020-12-03 16:44:42
- * @LastEditors: YornQiu
- * @LastEditTime: 2020-12-31 17:49:01
+ * @LastEditors: Yorn Qiu
+ * @LastEditTime: 2022-02-23 12:25:09
  * @Description: 数值格式化工具
- * @FilePath: \vue-template\src\utils\numberUtils.js
+ * @FilePath: /vue-template/src/utils/numberUtils.js
  */
 
 const numberUtils = {
@@ -16,7 +16,7 @@ const numberUtils = {
     1000000000000: '万亿',
     1000: 'k',
     1000000: 'M',
-    1000000000: 'G'
+    1000000000: 'G',
   },
   /**
    * @description 增加千分位
@@ -74,7 +74,7 @@ const numberUtils = {
           type: 'num',
           deg: 2,
           kannma: true,
-          datum: 1
+          datum: 1,
         };
       }
       value = Number(value);
@@ -158,9 +158,9 @@ const numberUtils = {
       type: isPercent ? 'percent' : 'num',
       kannma: true,
       deg: 2,
-      ...option
+      ...option,
     });
-  }
+  },
 };
 
 export default numberUtils;
