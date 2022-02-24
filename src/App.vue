@@ -1,27 +1,27 @@
 <template>
-  <div id="app" class="dfc">
-    <TheFrameHeader />
+  <div id="app">
+    <TheHeader />
     <el-container>
-      <TheFrameAside />
-      <el-main class="frame-content">
+      <TheAside />
+      <el-main class="layout-content">
         <router-view />
       </el-main>
     </el-container>
-    <TheFrameFooter />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import TheFrameHeader from '@/components/frame/TheFrameHeader';
-import TheFrameFooter from '@/components/frame/TheFrameFooter';
-import TheFrameAside from '@/components/frame/TheFrameAside';
+import TheHeader from '@/components/layout/TheHeader';
+import TheFooter from '@/components/layout/TheFooter';
+import TheAside from '@/components/layout/TheAside';
 
 export default {
   name: 'App',
   components: {
-    TheFrameHeader,
-    TheFrameFooter,
-    TheFrameAside,
+    TheHeader,
+    TheFooter,
+    TheAside,
   },
 };
 </script>
