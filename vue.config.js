@@ -37,14 +37,4 @@ module.exports = {
       },
     },
   },
-  pwa: {
-    iconPaths: {
-      faviconSVG: 'favicon.ico',
-      favicon16: 'favicon.ico',
-      favicon32: 'favicon.ico',
-      appleTouchIcon: 'favicon.ico',
-      maskIcon: 'favicon.ico',
-      msTileImage: 'favicon.ico',
-    },
-  },
 };
