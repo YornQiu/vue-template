@@ -1,4 +1,3 @@
-@import './base.css';
 @import './fonts/fonts.css';
 @import './icons/icons.css';
 @import './cover.scss';
@@ -17,7 +16,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
- }
+}
 
 .layout-header {
   color: #fff;
